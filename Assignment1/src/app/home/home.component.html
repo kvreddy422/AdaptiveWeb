@@ -1,0 +1,21 @@
+﻿<div class="">
+    <a [routerLink]="['/login']">
+        <button type="button" class="btn btn-default navbar-btn signOutButton">Sign out</button>
+    </a>
+
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p><a [routerLink]="['/stackoverflow']">To StackOverFlow</a></p>
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            <!-- - <a (click)="deleteUser(user.id)">Delete</a>-->
+        </li>
+    </ul>
+    <!--<my-charts></my-charts>-->
+    <div>
+        <p> User Clicks Per Chart</p>
+    <doughnut-chart></doughnut-chart>
+    </div>
+    <!--<interactive-pie></interactive-pie>-->
+</div>
